@@ -11,7 +11,9 @@ public class BGFrontManager : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject _frondGround;
-    [SerializeField] Transform _player;
+    [SerializeField] Transform _playerTransform;
+    [SerializeField] float _parallaxOffset;
+    Vector3 _playerPositionPreviews;
     List<GameObject> _frondGroundsList = new List<GameObject>();
     GameObject _frontGround;
     BGFrontJob _bgFrontJob;
@@ -19,23 +21,26 @@ public class BGFrontManager : MonoBehaviour
     NativeArray<bool> _isActiveNativeArray;
     TransformAccessArray _transformAccessArray;
     const int _frondGroundsCount = 11;
-    const int _frondGroundsGap =7;
+    const int _frondGroundsGap = 7;
+    Vector2 _playerSpeed;
     void Awake()
     {
         _isActiveNativeArray = new NativeArray<bool>(_frondGroundsCount, Allocator.Persistent);
         _transformAccessArray = new TransformAccessArray(_frondGroundsCount);
         for (int i = 0; i < _frondGroundsCount; i++)
         {
-            _frontGround = Instantiate(_frondGround, new Vector3(_player.transform.position.x - (_frondGroundsCount - 1) * _frondGroundsGap / 2 + i * _frondGroundsGap, UnityEngine.Random.Range(-6f,-7f), 0), Quaternion.identity, transform);
+            _frontGround = Instantiate(_frondGround, new Vector3(_playerTransform.transform.position.x - (_frondGroundsCount - 1) * _frondGroundsGap / 2 + i * _frondGroundsGap, UnityEngine.Random.Range(-6f, -7f), 0), Quaternion.identity, transform);
             _frondGroundsList.Add(_frontGround);
             _transformAccessArray.Add(_frontGround.transform);
         }
+        _playerPositionPreviews = _playerTransform.position;
     }
     void Update()
     {
+        _playerSpeed = _playerTransform.position - _playerPositionPreviews;
         _bgFrontJob = new BGFrontJob
         {
-            _playerPositionJob = _player.position,
+            _playerPositionJob = _playerTransform.position,
             _isActiveNativeArrayJob = _isActiveNativeArray,
             _frondGroundsGapJob = _frondGroundsGap,
             _frondGroundsCountJob = _frondGroundsCount
@@ -46,6 +51,7 @@ public class BGFrontManager : MonoBehaviour
         {
             _frondGroundsList[i].SetActive(_isActiveNativeArray[i]);
         }
+        _playerPositionPreviews = _playerTransform.position;
     }
     void OnDestroy()
     {

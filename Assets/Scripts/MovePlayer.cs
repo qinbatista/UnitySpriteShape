@@ -17,9 +17,17 @@ public class MovePlayer : MonoBehaviour
         {
             transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(Vector3.up * Time.deltaTime * speed);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.down * Time.deltaTime * speed);
+        }
         if (Input.GetKeyDown(KeyCode.J))
         {
-            speed= speed+5;
+            speed = speed + 5;
         }
     }
 }
