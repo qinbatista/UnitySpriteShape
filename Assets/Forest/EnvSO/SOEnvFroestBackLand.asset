@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380b32959d6b64e44a13a22c6fcaa7b2, type: 3}
   m_Name: SOEnvFroestBackLand
   m_EditorClassIdentifier: 
-  _objectCount: 15
+  _objectCount: 10
   _ObjectGap: 10
   _minDistance: 3
   _maxDistance: 5

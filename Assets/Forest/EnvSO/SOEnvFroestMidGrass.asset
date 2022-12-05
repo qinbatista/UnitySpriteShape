@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380b32959d6b64e44a13a22c6fcaa7b2, type: 3}
   m_Name: SOEnvFroestMidGrass
   m_EditorClassIdentifier: 
-  _objectCount: 20
+  _objectCount: 10
   _ObjectGap: 5
   _minDistance: 1
   _maxDistance: 5
