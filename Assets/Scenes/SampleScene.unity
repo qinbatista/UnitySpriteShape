@@ -234,8 +234,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 3.4550845e-25, y: -5.9685257e-34, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1937051e-32, y: 6.910169e-24, z: -10}
+  m_LocalRotation: {x: 3.646683e-25, y: -6.2996157e-34, z: 0, w: 1}
+  m_LocalPosition: {x: 1.259923e-32, y: 3.5299997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -438,7 +438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1535875853
 Transform:
   m_ObjectHideFlags: 0
@@ -542,7 +542,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642345488}
   m_LocalRotation: {x: 2.524355e-29, y: -4.362186e-38, z: -0, w: 1}
-  m_LocalPosition: {x: 8.720699e-37, y: 5.04871e-28, z: 0}
+  m_LocalPosition: {x: 8.713352e-37, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -578,7 +578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855676391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -631,7 +631,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855676391}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -642,8 +642,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!212 &1855676396
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_ZDamping: 1
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.753
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.22
   m_DeadZoneHeight: 0.134
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_SoftZoneWidth: 0.359
   m_SoftZoneHeight: 0.33
   m_BiasX: 0
-  m_BiasY: 0
+  m_BiasY: -0.0000012164213
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0

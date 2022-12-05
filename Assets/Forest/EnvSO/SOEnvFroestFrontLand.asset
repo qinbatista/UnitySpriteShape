@@ -15,15 +15,15 @@ MonoBehaviour:
   _objectCount: 10
   _ObjectGap: 5
   _minDistance: 5
-  _maxDistance: 8
-  _minY: -7
-  _maxY: -8
-  _minHeigh: 0.5
-  _maxHeight: 1.5
-  _minLeftTangentNoiseX: 0
-  _maxLeftTangentNoiseX: 2
-  _minLeftTangentNoiseY: 5
-  _maxLeftTangentNoiseY: 1
+  _maxDistance: 10
+  _minY: -5
+  _maxY: -7
+  _minHeigh: 0.9
+  _maxHeight: 1
+  _minTangentNoiseX: 1
+  _maxTangentNoiseX: 2
+  _minTangentNoiseY: 4
+  _maxTangentNoiseY: 6
   _sprites:
   - {fileID: 11400000, guid: 6a482f19426674a0e8f603bbb3e44ed3, type: 2}
-  _parallaxOffset: 2
+  _parallaxOffset: 1.5

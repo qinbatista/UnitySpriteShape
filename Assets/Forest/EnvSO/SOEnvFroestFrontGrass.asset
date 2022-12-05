@@ -16,14 +16,14 @@ MonoBehaviour:
   _ObjectGap: 7
   _minDistance: 8
   _maxDistance: 10
-  _minY: -8.3
-  _maxY: -9
-  _minHeigh: 0.5
-  _maxHeight: 1.5
-  _minLeftTangentNoiseX: 0
-  _maxLeftTangentNoiseX: 2
-  _minLeftTangentNoiseY: 5
-  _maxLeftTangentNoiseY: 2
+  _minY: -5
+  _maxY: -7
+  _minHeigh: 0.1
+  _maxHeight: 3
+  _minTangentNoiseX: 0
+  _maxTangentNoiseX: 2
+  _minTangentNoiseY: 0
+  _maxTangentNoiseY: 2
   _sprites:
   - {fileID: 11400000, guid: b0705bfec3a97422382c584cdc5d507f, type: 2}
   - {fileID: 11400000, guid: 947ffa5683d2e4ec3a0201b05910cf86, type: 2}
