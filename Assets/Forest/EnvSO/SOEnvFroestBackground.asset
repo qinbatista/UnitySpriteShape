@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 380b32959d6b64e44a13a22c6fcaa7b2, type: 3}
-  m_Name: SOEnvFroestMidGrass
+  m_Name: SOEnvFroestBackground
   m_EditorClassIdentifier: 
-  _objectCount: 20
+  _objectCount: 15
   _ObjectGap: 5
-  _minDistance: 1
-  _maxDistance: 5
+  _minDistance: 5
+  _maxDistance: 6
   _minY: -2
-  _maxY: -1
-  _minHeigh: 4
+  _maxY: 0
+  _minHeigh: 3
   _maxHeight: 4
-  _minTangentNoiseX: 0
+  _minTangentNoiseX: 0.1
   _maxTangentNoiseX: 1
-  _minTangentNoiseY: 0
-  _maxTangentNoiseY: 0.5
+  _minTangentNoiseY: 0.1
+  _maxTangentNoiseY: 0.3
   _sprites:
-  - {fileID: 11400000, guid: 3863afb143c5b4d0a9f19517ba792ba8, type: 2}
-  - {fileID: 11400000, guid: 71ec868b18e5745b39313d6137bf3124, type: 2}
-  _parallaxOffset: 0.9
+  - {fileID: 11400000, guid: 5fb089639cd1e48efa3506993ce0a341, type: 2}
+  - {fileID: 11400000, guid: d3cf971d8081c479f9c569f1f3d58ecd, type: 2}
+  _parallaxOffset: 0.1
