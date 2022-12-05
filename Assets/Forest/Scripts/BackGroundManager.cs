@@ -60,37 +60,38 @@ public class BackGroundManager : MonoBehaviour
         _isActiveNativeArray.Dispose();
         _transformAccessArray.Dispose();
     }
-    [BurstCompile]
-    public struct BGFrontJob : IJobParallelForTransform
-    {
-        [ReadOnly] public Vector3 _playerPositionJob;
-        public NativeArray<bool> _isActiveNativeArrayJob;
-        [ReadOnly] public float _frondGroundsGapJob;
-        [ReadOnly] public float _frondGroundsCountJob;
-        [ReadOnly] public Vector3 _playerSpeedJob;
-        [ReadOnly] public float _parallaxOffsetJob;
-        public void Execute(int index, TransformAccess transform)
-        {
-            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * 4)
-                _isActiveNativeArrayJob[index] = false;//left 2 grounds, right 2 grounds are visiable
-            else
-                _isActiveNativeArrayJob[index] = true;
 
-            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * (_frondGroundsCountJob - 1) / 2 + _frondGroundsGapJob)// farther than half of all grounds+1 ground
+}
+[BurstCompile]
+public struct BGFrontJob : IJobParallelForTransform
+{
+    [ReadOnly] public Vector3 _playerPositionJob;
+    public NativeArray<bool> _isActiveNativeArrayJob;
+    [ReadOnly] public float _frondGroundsGapJob;
+    [ReadOnly] public float _frondGroundsCountJob;
+    [ReadOnly] public Vector3 _playerSpeedJob;
+    [ReadOnly] public float _parallaxOffsetJob;
+    public void Execute(int index, TransformAccess transform)
+    {
+        if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * 4)
+            _isActiveNativeArrayJob[index] = false;//left 2 grounds, right 2 grounds are visiable
+        else
+            _isActiveNativeArrayJob[index] = true;
+
+        if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * (_frondGroundsCountJob - 1) / 2 + _frondGroundsGapJob)// farther than half of all grounds+1 ground
+        {
+            if (_playerPositionJob.x > transform.position.x)
             {
-                if (_playerPositionJob.x > transform.position.x)
-                {
-                    transform.position = new Vector3(transform.position.x + _frondGroundsGapJob * _frondGroundsCountJob, transform.position.y, transform.position.z);
-                    // Debug.Log($"left move to right = {transform.position}");
-                }
-                else
-                {
-                    transform.position = new Vector3(transform.position.x - _frondGroundsGapJob * _frondGroundsCountJob, transform.position.y, transform.position.z);
-                    // Debug.Log($"right move to left = {transform.position}");
-                }
+                transform.position = new Vector3(transform.position.x + _frondGroundsGapJob * _frondGroundsCountJob, transform.position.y, transform.position.z);
+                // Debug.Log($"left move to right = {transform.position}");
             }
-            //parallax offset
-            transform.position = new Vector3(transform.position.x + (-_playerSpeedJob.x * _parallaxOffsetJob), transform.position.y + -(_playerSpeedJob.y * _parallaxOffsetJob), transform.position.z);
+            else
+            {
+                transform.position = new Vector3(transform.position.x - _frondGroundsGapJob * _frondGroundsCountJob, transform.position.y, transform.position.z);
+                // Debug.Log($"right move to left = {transform.position}");
+            }
         }
+        //parallax offset
+        transform.position = new Vector3(transform.position.x + (-_playerSpeedJob.x * _parallaxOffsetJob), transform.position.y + -(_playerSpeedJob.y * _parallaxOffsetJob), transform.position.z);
     }
 }
