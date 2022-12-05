@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380b32959d6b64e44a13a22c6fcaa7b2, type: 3}
+  m_Name: SOEnvFroestFrontLand
+  m_EditorClassIdentifier: 
+  _objectCount: 10
+  _ObjectGap: 5
+  _minDistance: 5
+  _maxDistance: 8
+  _minY: -7
+  _maxY: -8
+  _minHeigh: 0.5
+  _maxHeight: 1.5
+  _minLeftTangentNoiseX: 0
+  _maxLeftTangentNoiseX: 2
+  _minLeftTangentNoiseY: 5
+  _maxLeftTangentNoiseY: 1
+  _sprites:
+  - {fileID: 11400000, guid: 6a482f19426674a0e8f603bbb3e44ed3, type: 2}
+  _parallaxOffset: 2
