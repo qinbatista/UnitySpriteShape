@@ -24,6 +24,7 @@ public class SOEnvObject : ScriptableObject
     [SerializeField] float _minTangentNoiseY = 0f;
     [SerializeField] float _maxTangentNoiseY = 2f;
     [SerializeField] List<SpriteShape> _sprites = new List<SpriteShape>();
+    [Header("GameSetting")]
     [SerializeField] float _parallaxOffset = 1f;
 
     public float MinDistance { get => _minDistance; }

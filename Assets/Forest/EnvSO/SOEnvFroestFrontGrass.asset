@@ -18,7 +18,7 @@ MonoBehaviour:
   _maxDistance: 10
   _minY: -5
   _maxY: -7
-  _minHeigh: 0.1
+  _minHeigh: 1
   _maxHeight: 3
   _minTangentNoiseX: 0
   _maxTangentNoiseX: 2

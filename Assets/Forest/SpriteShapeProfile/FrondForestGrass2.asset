@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af7181f404f1447c0a7a17b3070b952b, type: 3}
-  m_Name: ForestObstacle4Frond
+  m_Name: FrondForestGrass2
   m_EditorClassIdentifier: 
   m_Angles:
   - m_Start: -180
     m_End: 180
     m_Order: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 65513eb0c365bc74ebc302f9016269d7, type: 3}
+    - {fileID: 21300000, guid: 4974d2f775e17aa47a9b7e12744441eb, type: 3}
   m_FillTexture: {fileID: 0}
   m_CornerSprites:
   - m_CornerType: 0
