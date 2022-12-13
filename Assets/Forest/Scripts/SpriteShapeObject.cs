@@ -28,13 +28,13 @@ public class SpriteShapeObject : MonoBehaviour
     }
     void OnEnable()
     {
-        _landDistance = Random.Range(SoEnvObject.MinDistance, SoEnvObject.MaxDistance);
+        _landDistance = Random.Range(SoEnvObject.ShapeDistance.minValue, SoEnvObject.ShapeDistance.maxValue);
         _spline.SetPosition(_leftSplineNode, new Vector3(-_landDistance, 0, 0));
         _spline.SetPosition(_rightSplineNode, new Vector3(_landDistance, 0, 0));
-        _spline.SetRightTangent(_leftSplineNode, new Vector3(Random.Range(SoEnvObject.MinTangentNoiseX,  SoEnvObject.MaxTangentNoiseX), Random.Range(  SoEnvObject.MinTangentNoiseY,  SoEnvObject.MaxTangentNoiseY), 0));
-        _spline.SetLeftTangent(_rightSplineNode, new Vector3(-Random.Range(SoEnvObject.MinTangentNoiseX,  SoEnvObject.MaxTangentNoiseX), Random.Range( SoEnvObject.MinTangentNoiseY, SoEnvObject.MaxTangentNoiseY), 0));
-        _spline.SetHeight(_leftSplineNode, Random.Range(SoEnvObject.MinHeigh, SoEnvObject.MaxHeight));
-        _spline.SetHeight(_rightSplineNode, Random.Range(SoEnvObject.MinHeigh, SoEnvObject.MaxHeight));
+        _spline.SetRightTangent(_leftSplineNode, new Vector3(Random.Range(SoEnvObject.TangentNoiseX.minValue,  SoEnvObject.TangentNoiseX.maxValue), Random.Range(  SoEnvObject.TangentNoiseY.minValue,  SoEnvObject.TangentNoiseY.maxValue), 0));
+        _spline.SetLeftTangent(_rightSplineNode, new Vector3(-Random.Range(SoEnvObject.TangentNoiseX.minValue,  SoEnvObject.TangentNoiseX.maxValue), Random.Range( SoEnvObject.TangentNoiseY.minValue,  SoEnvObject.TangentNoiseY.maxValue), 0));
+        _spline.SetHeight(_leftSplineNode, Random.Range(SoEnvObject.Heigh.minValue, SoEnvObject.Heigh.maxValue));
+        _spline.SetHeight(_rightSplineNode, Random.Range(SoEnvObject.Heigh.minValue, SoEnvObject.Heigh.maxValue));
         transform.localScale = new Vector3(Random.Range(0, 2) == 0 ? -1 : 1, 1, 1);
         _spriteShapeController.RefreshSpriteShape();
         _spriteShapeController.spriteShape = SoEnvObject.Sprites[Random.Range(0, SoEnvObject.Sprites.Count)];

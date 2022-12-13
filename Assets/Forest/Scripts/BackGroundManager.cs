@@ -29,7 +29,7 @@ public class BackGroundManager : MonoBehaviour
         _transformAccessArray = new TransformAccessArray(_frondGroundsCount);
         for (int i = 0; i < _frondGroundsCount; i++)
         {
-            _frontGround = Instantiate(_environmentObject, new Vector3(_playerTransform.transform.position.x - (_frondGroundsCount - 1) * _frondGroundsGap / 2f + i * _frondGroundsGap, UnityEngine.Random.Range(_soEnvObject.MinY, _soEnvObject.MaxY), 0), Quaternion.identity, transform);
+            _frontGround = Instantiate(_environmentObject, new Vector3(_playerTransform.transform.position.x - (_frondGroundsCount - 1) * _frondGroundsGap / 2f + i * _frondGroundsGap, UnityEngine.Random.Range(_soEnvObject.PositionY.minValue, _soEnvObject.PositionY.maxValue), 0), Quaternion.identity, transform);
             _frondGroundsList.Add(_frontGround);
             _transformAccessArray.Add(_frontGround.transform);
         }

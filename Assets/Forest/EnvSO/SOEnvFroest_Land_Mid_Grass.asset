@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380b32959d6b64e44a13a22c6fcaa7b2, type: 3}
+  m_Name: SOEnvFroest_Land_Mid_Grass
+  m_EditorClassIdentifier: 
+  _objectCount: 10
+  _ObjectGap: 5
+  _minDistance: 1
+  _maxDistance: 5
+  _minY: -2
+  _maxY: -1
+  _height:
+    minValue: 3.9459815
+    maxValue: 4.0118575
+  _tangentNoiseX:
+    minValue: 0
+    maxValue: 0.9222661
+  _tangentNoiseY:
+    minValue: 0
+    maxValue: 0.6587615
+  _sprites:
+  - {fileID: 11400000, guid: 3863afb143c5b4d0a9f19517ba792ba8, type: 2}
+  - {fileID: 11400000, guid: 71ec868b18e5745b39313d6137bf3124, type: 2}
+  _parallaxOffset: 0.9
