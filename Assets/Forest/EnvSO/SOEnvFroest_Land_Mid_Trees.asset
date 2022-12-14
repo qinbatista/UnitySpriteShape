@@ -14,19 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectCount: 10
   _ObjectGap: 5
-  _minDistance: 1
-  _maxDistance: 4
-  _minY: -2
-  _maxY: 0
-  _height:
-    minValue: 2.964427
-    maxValue: 4.018445
+  _generatePositionY:
+    minValue: -1.9656018
+    maxValue: 0
+  _shapeDistance:
+    minValue: 1.064701
+    maxValue: 4.0950036
+  _tangentHeight:
+    minValue: 3.0712528
+    maxValue: 4.0131044
   _tangentNoiseX:
     minValue: 0.1317523
-    maxValue: 0.5270093
+    maxValue: 0.199409
   _tangentNoiseY:
-    minValue: 0.1317523
-    maxValue: 0.5270092
+    minValue: 0.18213925
+    maxValue: 0.24979591
   _sprites:
   - {fileID: 11400000, guid: 7f51761d0c0164635bfd27e55c86c8dd, type: 2}
   _parallaxOffset: 0.7

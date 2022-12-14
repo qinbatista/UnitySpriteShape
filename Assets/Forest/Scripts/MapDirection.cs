@@ -1,0 +1,5 @@
+enum MapDirection
+{
+    Horizontal,
+    Vertical
+}

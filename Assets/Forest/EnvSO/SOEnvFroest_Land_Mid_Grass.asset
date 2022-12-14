@@ -14,13 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectCount: 10
   _ObjectGap: 5
-  _minDistance: 1
-  _maxDistance: 5
-  _minY: -2
-  _maxY: -1
-  _height:
-    minValue: 3.9459815
-    maxValue: 4.0118575
+  _generatePositionY:
+    minValue: -1.9574114
+    maxValue: -0.97461045
+  _shapeDistance:
+    minValue: 1.0687964
+    maxValue: 4.995904
+  _tangentHeight:
+    minValue: 4.017199
+    maxValue: 4.1809993
   _tangentNoiseX:
     minValue: 0
     maxValue: 0.9222661
