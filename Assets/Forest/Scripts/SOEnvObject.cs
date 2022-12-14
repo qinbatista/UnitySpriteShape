@@ -9,7 +9,8 @@ public class SOEnvObject : ScriptableObject
 {
     [Header("Objects")]
     [SerializeField] int _objectCount = 5;
-    [SerializeField] float _ObjectGap = 10f;
+    [SerializeField] float _objectGap = 10f;
+    [SerializeField] float _densityVertical = 10f;
     [SerializeField] MapDirection _mapDirection;
     [Header("Shapes")]
     [SerializeField][MinMaxRange(-10, 10)] RangedFloat _generatePositionX;
@@ -32,6 +33,7 @@ public class SOEnvObject : ScriptableObject
     public RangedFloat PositionY { get => _generatePositionY; }
     public RangedFloat PositionX { get => _generatePositionX; }
     public int ObjectCount { get => _objectCount; }
-    public float ObjectGap { get => _ObjectGap; }
+    public float ObjectGap { get => _objectGap; }
+    public float DensityVertical { get => _densityVertical;}
     internal MapDirection MapDirection { get => _mapDirection;}
 }

@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: SOEnvFroest_UnderLand_FrontLand
   m_EditorClassIdentifier: 
   _objectCount: 100
-  _ObjectGap: 10
+  _objectGap: 10
+  _densityVertical: 6
   _mapDirection: 1
   _generatePositionX:
-    minValue: -10
-    maxValue: 10
+    minValue: -3.8674874
+    maxValue: 4.6584496
   _generatePositionY:
-    minValue: -10
-    maxValue: -0.7550087
+    minValue: 0.34412003
+    maxValue: 8.356446
   _shapeDistance:
     minValue: 3.2968247
     maxValue: 4.182455

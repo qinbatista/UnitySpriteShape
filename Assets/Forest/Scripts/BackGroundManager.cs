@@ -31,7 +31,6 @@ public class BackGroundManager : MonoBehaviour
     {
         _isActiveNativeArray = new NativeArray<bool>(_groundsCount, Allocator.Persistent);
         _transformAccessArray = new TransformAccessArray(_groundsCount);
-
         for (int i = 0; i < _groundsCount; i++)
         {
             if ((int)_soEnvObject.MapDirection == _horizontalIndex)
@@ -46,15 +45,15 @@ public class BackGroundManager : MonoBehaviour
             }
             else if ((int)_soEnvObject.MapDirection == _verticalIndex)
             {
-                if (i % 5 == 0) _vertical_Layer++;
-                if (i % 10 != 0)
+                if (i % _soEnvObject.DensityVertical == 0) _vertical_Layer++;
+                if ((i % _soEnvObject.DensityVertical) != 0)
                     _horizontal_Layer++;
                 else
                     _horizontal_Layer = 0;
                 _frontGround = Instantiate(_environmentObject,
                 new Vector3(
-                        _playerTransform.transform.position.x - _groundsGap * (10 / 2) + _groundsGap * (_horizontal_Layer+1) + UnityEngine.Random.Range(_soEnvObject.PositionX.minValue, _soEnvObject.PositionX.maxValue),
-                        _playerTransform.transform.position.y - 2 * _vertical_Layer + UnityEngine.Random.Range(_soEnvObject.PositionY.minValue, _soEnvObject.PositionY.maxValue),
+                        _playerTransform.transform.position.x - _groundsGap * _soEnvObject.DensityVertical / 2f + _groundsGap * (_horizontal_Layer+1) + UnityEngine.Random.Range(_soEnvObject.PositionX.minValue, _soEnvObject.PositionX.maxValue),
+                        _playerTransform.transform.position.y - _groundsGap*_vertical_Layer - UnityEngine.Random.Range(_soEnvObject.PositionY.minValue, _soEnvObject.PositionY.maxValue),
                         0
                         ),
                         Quaternion.identity, transform);
