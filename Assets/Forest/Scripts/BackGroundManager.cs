@@ -70,8 +70,8 @@ public class BackGroundManager : MonoBehaviour
         {
             _playerPositionJob = _playerTransform.position,
             _isActiveNativeArrayJob = _isActiveNativeArray,
-            _frondGroundsGapJob = _groundsGap,
-            _frondGroundsCountJob = _groundsCount,
+            _groundsGapJob = _groundsGap,
+            _groundsCountJob = _groundsCount,
             _playerSpeedJob = _playerSpeed,
             _parallaxOffsetJob = _soEnvObject.ParallaxOffset,
             _isHorizontalJob = (int)_soEnvObject.MapDirection == _horizontalIndex ? true : false,
@@ -97,8 +97,8 @@ public struct BGFrontJob : IJobParallelForTransform
 {
     [ReadOnly] public Vector3 _playerPositionJob;
     public NativeArray<bool> _isActiveNativeArrayJob;
-    [ReadOnly] public float _frondGroundsGapJob;
-    [ReadOnly] public float _frondGroundsCountJob;
+    [ReadOnly] public float _groundsGapJob;
+    [ReadOnly] public float _groundsCountJob;
     [ReadOnly] public Vector3 _playerSpeedJob;
     [ReadOnly] public float _parallaxOffsetJob;
     [ReadOnly] public bool _isHorizontalJob;
@@ -107,42 +107,56 @@ public struct BGFrontJob : IJobParallelForTransform
     {
         if (_isHorizontalJob)
         {
-            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * 2)
+            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _groundsGapJob * 2)
                 _isActiveNativeArrayJob[index] = false;//left 2 grounds, right 2 grounds are visiable
             else
                 _isActiveNativeArrayJob[index] = true;
 
-            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * (_frondGroundsCountJob - 1) / 2 + _frondGroundsGapJob)// farther than half of all grounds+1 ground
+            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _groundsGapJob * (_groundsCountJob - 1) / 2 + _groundsGapJob)// farther than half of all grounds+1 ground
             {
                 if (_playerPositionJob.x > transform.position.x)
                 {
-                    transform.position = new Vector3(transform.position.x + _frondGroundsGapJob * _frondGroundsCountJob, transform.position.y, transform.position.z);
+                    transform.position = new Vector3(transform.position.x + _groundsGapJob * _groundsCountJob, transform.position.y, transform.position.z);
                     // Debug.Log($"left move to right = {transform.position}");
                 }
                 else
                 {
-                    transform.position = new Vector3(transform.position.x - _frondGroundsGapJob * _frondGroundsCountJob, transform.position.y, transform.position.z);
+                    transform.position = new Vector3(transform.position.x - _groundsGapJob * _groundsCountJob, transform.position.y, transform.position.z);
                     // Debug.Log($"right move to left = {transform.position}");
                 }
             }
         }
         else
         {
-            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * 2)
+            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _groundsGapJob * 2 || transform.position.y > 0)
                 _isActiveNativeArrayJob[index] = false;//left 2 grounds, right 2 grounds are visiable
             else
                 _isActiveNativeArrayJob[index] = true;
             // Debug.Log($"distance = {_frondGroundsGapJob * (_frondGroundsCountJob - 1) / 2 + _frondGroundsGapJob}");
-            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * _densityVerticalJob/2f)// farther than half of all grounds+1 ground
+            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _groundsGapJob * _densityVerticalJob / 2f)// farther than half of all grounds+1 ground
             {
                 if (_playerPositionJob.x > transform.position.x)
                 {
-                    transform.position = new Vector3(transform.position.x + _frondGroundsGapJob * _densityVerticalJob, transform.position.y, transform.position.z);
+                    transform.position = new Vector3(transform.position.x + _groundsGapJob * _densityVerticalJob, transform.position.y, transform.position.z);
                     // Debug.Log($"left move to right = {transform.position}");
                 }
                 else
                 {
-                    transform.position = new Vector3(transform.position.x - _frondGroundsGapJob * _densityVerticalJob, transform.position.y, transform.position.z);
+                    transform.position = new Vector3(transform.position.x - _groundsGapJob * _densityVerticalJob, transform.position.y, transform.position.z);
+                    // Debug.Log($"right move to left = {transform.position}");
+                }
+            }
+            if (Mathf.Abs(_playerPositionJob.y - transform.position.y) > _groundsCountJob / _densityVerticalJob * _groundsGapJob / 2f)// farther than half of all grounds+1 ground
+            {
+                if (_playerPositionJob.y < transform.position.y)
+                {
+                    transform.position = new Vector3(transform.position.x, transform.position.y - _groundsCountJob / _densityVerticalJob * _groundsGapJob, transform.position.z);
+                    // Debug.Log($"left move to right = {transform.position}");
+                }
+                else
+                {
+                    if ((transform.position.y + _groundsCountJob / _densityVerticalJob * _groundsGapJob) < 0)
+                        transform.position = new Vector3(transform.position.x, transform.position.y + _groundsCountJob / _densityVerticalJob * _groundsGapJob, transform.position.z);
                     // Debug.Log($"right move to left = {transform.position}");
                 }
             }
