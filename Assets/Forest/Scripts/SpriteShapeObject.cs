@@ -26,7 +26,7 @@ public class SpriteShapeObject : MonoBehaviour
         _initialLeftSplinePosition = _spline.GetPosition(_leftSplineNode);
         _initialRightSplinePosition = _spline.GetPosition(_rightSplineNode);
 #if UNITY_EDITOR
-        InvokeRepeating("OnEnable", 0, 1);
+        // InvokeRepeating("OnEnable", 0, 1);
 #endif
     }
     void OnEnable()

@@ -52,8 +52,8 @@ public class BackGroundManager : MonoBehaviour
                     _horizontal_Layer = 0;
                 _frontGround = Instantiate(_environmentObject,
                 new Vector3(
-                        _playerTransform.transform.position.x - _groundsGap * _soEnvObject.DensityVertical / 2f + _groundsGap * (_horizontal_Layer+1) + UnityEngine.Random.Range(_soEnvObject.PositionX.minValue, _soEnvObject.PositionX.maxValue),
-                        _playerTransform.transform.position.y - _groundsGap*_vertical_Layer - UnityEngine.Random.Range(_soEnvObject.PositionY.minValue, _soEnvObject.PositionY.maxValue),
+                        _playerTransform.transform.position.x - _groundsGap * _soEnvObject.DensityVertical / 2f + _groundsGap * (_horizontal_Layer + 1) + UnityEngine.Random.Range(_soEnvObject.PositionX.minValue, _soEnvObject.PositionX.maxValue),
+                        _playerTransform.transform.position.y - _groundsGap * _vertical_Layer - UnityEngine.Random.Range(_soEnvObject.PositionY.minValue, _soEnvObject.PositionY.maxValue),
                         0
                         ),
                         Quaternion.identity, transform);
@@ -74,7 +74,8 @@ public class BackGroundManager : MonoBehaviour
             _frondGroundsCountJob = _groundsCount,
             _playerSpeedJob = _playerSpeed,
             _parallaxOffsetJob = _soEnvObject.ParallaxOffset,
-            _isHorizontalJob = (int)_soEnvObject.MapDirection == _horizontalIndex ? true : false
+            _isHorizontalJob = (int)_soEnvObject.MapDirection == _horizontalIndex ? true : false,
+            _densityVerticalJob = _soEnvObject.DensityVertical
         };
         _jobHandle = _bgFrontJob.Schedule(_transformAccessArray);
         _jobHandle.Complete();
@@ -101,11 +102,12 @@ public struct BGFrontJob : IJobParallelForTransform
     [ReadOnly] public Vector3 _playerSpeedJob;
     [ReadOnly] public float _parallaxOffsetJob;
     [ReadOnly] public bool _isHorizontalJob;
+    [ReadOnly] public float _densityVerticalJob;
     public void Execute(int index, TransformAccess transform)
     {
         if (_isHorizontalJob)
         {
-            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * 4)
+            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * 2)
                 _isActiveNativeArrayJob[index] = false;//left 2 grounds, right 2 grounds are visiable
             else
                 _isActiveNativeArrayJob[index] = true;
@@ -126,7 +128,24 @@ public struct BGFrontJob : IJobParallelForTransform
         }
         else
         {
-            _isActiveNativeArrayJob[index] = true;
+            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * 2)
+                _isActiveNativeArrayJob[index] = false;//left 2 grounds, right 2 grounds are visiable
+            else
+                _isActiveNativeArrayJob[index] = true;
+            // Debug.Log($"distance = {_frondGroundsGapJob * (_frondGroundsCountJob - 1) / 2 + _frondGroundsGapJob}");
+            if (Mathf.Abs(_playerPositionJob.x - transform.position.x) > _frondGroundsGapJob * _densityVerticalJob/2f)// farther than half of all grounds+1 ground
+            {
+                if (_playerPositionJob.x > transform.position.x)
+                {
+                    transform.position = new Vector3(transform.position.x + _frondGroundsGapJob * _densityVerticalJob, transform.position.y, transform.position.z);
+                    // Debug.Log($"left move to right = {transform.position}");
+                }
+                else
+                {
+                    transform.position = new Vector3(transform.position.x - _frondGroundsGapJob * _densityVerticalJob, transform.position.y, transform.position.z);
+                    // Debug.Log($"right move to left = {transform.position}");
+                }
+            }
         }
         //parallax offset
         transform.position = new Vector3(transform.position.x + (-_playerSpeedJob.x * _parallaxOffsetJob), transform.position.y + -(_playerSpeedJob.y * _parallaxOffsetJob), transform.position.z);
