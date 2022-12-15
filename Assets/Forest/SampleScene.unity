@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 65386853}
   - component: {fileID: 65386855}
-  - component: {fileID: 65386854}
   m_Layer: 0
   m_Name: UnderLand
   m_TagString: Untagged
@@ -156,17 +155,6 @@ Transform:
   m_Father: {fileID: 1581396023}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!210 &65386854
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65386852}
-  m_Enabled: 1
-  m_SortingLayerID: -1143605797
-  m_SortingLayer: 2
-  m_SortingOrder: 0
 --- !u!114 &65386855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,8 +313,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 1.3157947e-24, y: -2.2720034e-33, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5440068e-32, y: 3.5299997, z: -10}
+  m_LocalRotation: {x: 1.7122194e-24, y: -2.9555989e-33, z: 0, w: 1}
+  m_LocalPosition: {x: 5.911198e-32, y: 3.5299997, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -406,7 +394,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000dbf5d5bbb78cf6533309d445c77cf713
+  m_ApplyToSortingLayers: 000000003309d445b78cf653e3ac690ec77cf713dbf5d5bbafb74eb6
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -524,7 +512,6 @@ GameObject:
   m_Component:
   - component: {fileID: 981802814}
   - component: {fileID: 981802816}
-  - component: {fileID: 981802815}
   m_Layer: 0
   m_Name: MidGrass
   m_TagString: Untagged
@@ -547,17 +534,6 @@ Transform:
   m_Father: {fileID: 1373925241}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!210 &981802815
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981802813}
-  m_Enabled: 1
-  m_SortingLayerID: 1408666807
-  m_SortingLayer: 1
-  m_SortingOrder: 7
 --- !u!114 &981802816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,7 +560,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1015825282}
   - component: {fileID: 1015825284}
-  - component: {fileID: 1015825285}
   m_Layer: 0
   m_Name: MidLand
   m_TagString: Untagged
@@ -623,17 +598,6 @@ MonoBehaviour:
   _playerTransform: {fileID: 1855676392}
   _horizontalViewDistance: 20
   _verticalViewDistance: 20
---- !u!210 &1015825285
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015825281}
-  m_Enabled: 1
-  m_SortingLayerID: -1143605797
-  m_SortingLayer: 2
-  m_SortingOrder: -1
 --- !u!1 &1056478090
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +732,7 @@ MonoBehaviour:
   m_Intensity: 3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000b78cf653dbf5d5bbafb74eb63309d445c77cf713
+  m_ApplyToSortingLayers: e3ac690e
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -777,7 +741,7 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 0
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensityEnabled: 1
   m_ShadowIntensity: 0.75
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
@@ -837,7 +801,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1208738565}
   - component: {fileID: 1208738567}
-  - component: {fileID: 1208738566}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -860,17 +823,6 @@ Transform:
   m_Father: {fileID: 1373925241}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!210 &1208738566
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208738564}
-  m_Enabled: 1
-  m_SortingLayerID: 1408666807
-  m_SortingLayer: 1
-  m_SortingOrder: 6
 --- !u!114 &1208738567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,7 +849,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1314877845}
   - component: {fileID: 1314877847}
-  - component: {fileID: 1314877846}
   m_Layer: 0
   m_Name: BackLand
   m_TagString: Untagged
@@ -920,17 +871,6 @@ Transform:
   m_Father: {fileID: 1373925241}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!210 &1314877846
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314877844}
-  m_Enabled: 1
-  m_SortingLayerID: 1408666807
-  m_SortingLayer: 1
-  m_SortingOrder: 7
 --- !u!114 &1314877847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,7 +934,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1535875853}
   - component: {fileID: 1535875855}
-  - component: {fileID: 1535875854}
   m_Layer: 0
   m_Name: FrontGrass
   m_TagString: Untagged
@@ -1017,17 +956,6 @@ Transform:
   m_Father: {fileID: 1373925241}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!210 &1535875854
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535875852}
-  m_Enabled: 1
-  m_SortingLayerID: -1236355153
-  m_SortingLayer: 3
-  m_SortingOrder: 12
 --- !u!114 &1535875855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,7 +1039,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 5
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 1855676392}
   m_Follow: {fileID: 1855676392}
@@ -1159,7 +1087,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1756592620}
   - component: {fileID: 1756592622}
-  - component: {fileID: 1756592621}
   m_Layer: 0
   m_Name: MidTrees
   m_TagString: Untagged
@@ -1182,17 +1109,6 @@ Transform:
   m_Father: {fileID: 1373925241}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!210 &1756592621
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756592619}
-  m_Enabled: 1
-  m_SortingLayerID: 1408666807
-  m_SortingLayer: 1
-  m_SortingOrder: 8
 --- !u!114 &1756592622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,7 +1135,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1811254989}
   - component: {fileID: 1811254990}
-  - component: {fileID: 1811254991}
   m_Layer: 0
   m_Name: FrontLand
   m_TagString: Untagged
@@ -1258,17 +1173,6 @@ MonoBehaviour:
   _playerTransform: {fileID: 1855676392}
   _horizontalViewDistance: 10
   _verticalViewDistance: 10
---- !u!210 &1811254991
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811254988}
-  m_Enabled: 1
-  m_SortingLayerID: -1143605797
-  m_SortingLayer: 2
-  m_SortingOrder: 1
 --- !u!1 &1855676391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,9 +1306,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 334986439
-  m_SortingLayer: 5
-  m_SortingOrder: 9
+  m_SortingLayerID: 241806563
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7512fa15d91f77b4698f876bc1723787, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1426,7 +1330,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2041211136}
   - component: {fileID: 2041211137}
-  - component: {fileID: 2041211138}
   m_Layer: 0
   m_Name: FrontLand
   m_TagString: Untagged
@@ -1465,17 +1368,6 @@ MonoBehaviour:
   _playerTransform: {fileID: 1855676392}
   _horizontalViewDistance: 10
   _verticalViewDistance: 10
---- !u!210 &2041211138
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2041211135}
-  m_Enabled: 1
-  m_SortingLayerID: 1408666807
-  m_SortingLayer: 1
-  m_SortingOrder: 10
 --- !u!1 &2127168332
 GameObject:
   m_ObjectHideFlags: 3

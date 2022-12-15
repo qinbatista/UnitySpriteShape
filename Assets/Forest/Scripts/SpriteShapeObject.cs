@@ -27,6 +27,8 @@ public class SpriteShapeObject : MonoBehaviour
         _initialLeftSplinePosition = _spline.GetPosition(_leftSplineNode);
         _initialRightSplinePosition = _spline.GetPosition(_rightSplineNode);
         _spriteRenderer.color = SoEnvObject.Color;
+        _spriteRenderer.sortingLayerName = SoEnvObject.SortingLayerID.ToString();
+        _spriteRenderer.sortingOrder = SoEnvObject.SortingOrder;
 #if UNITY_EDITOR
         // InvokeRepeating("OnEnable", 0, 1);
 #endif

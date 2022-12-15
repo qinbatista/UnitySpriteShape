@@ -1,4 +1,4 @@
-enum MapDirection
+enum MapDirectionID
 {
     Horizontal,
     Vertical

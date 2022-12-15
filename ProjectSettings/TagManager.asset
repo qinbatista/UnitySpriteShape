@@ -41,18 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Land
+  - name: Sky
+    uniqueID: 1171523891
+    locked: 0
+  - name: BackGround
     uniqueID: 1408666807
     locked: 0
-  - name: UnderLand
+  - name: LightLand
+    uniqueID: 241806563
+    locked: 0
+  - name: Player
+    uniqueID: 334986439
+    locked: 0
+  - name: Land
     uniqueID: 3151361499
     locked: 0
   - name: FrontObstacle
     uniqueID: 3058612143
-    locked: 0
-  - name: BackSky
-    uniqueID: 1171523891
-    locked: 0
-  - name: Player
-    uniqueID: 334986439
     locked: 0

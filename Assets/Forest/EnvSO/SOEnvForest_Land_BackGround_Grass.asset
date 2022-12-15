@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 380b32959d6b64e44a13a22c6fcaa7b2, type: 3}
+  m_Name: SOEnvForest_Land_BackGround_Grass
+  m_EditorClassIdentifier: 
+  _objectCount: 10
+  _objectGap: 10
+  _densityVertical: 10
+  _mapDirection: 0
+  _color:
+    serializedVersion: 2
+    rgba: 4286874756
+  _generatePositionX:
+    minValue: 0
+    maxValue: 6.6356993
+  _generatePositionY:
+    minValue: -3.019123
+    maxValue: -0.9746103
+  _sortingLayerID: 1
+  _sortingOrder: 0
+  _shapeDistance:
+    minValue: 2.5215657
+    maxValue: 3.4626093
+  _tangentHeight:
+    minValue: 4.9926467
+    maxValue: 5
+  _tangentNoiseX:
+    minValue: 4.077735
+    maxValue: 5
+  _tangentNoiseY:
+    minValue: 0
+    maxValue: 4.1093254
+  _sprites:
+  - {fileID: 11400000, guid: 3863afb143c5b4d0a9f19517ba792ba8, type: 2}
+  - {fileID: 11400000, guid: 71ec868b18e5745b39313d6137bf3124, type: 2}
+  _parallaxOffset: 0.9

@@ -11,10 +11,12 @@ public class SOEnvObject : ScriptableObject
     [SerializeField] int _objectCount = 5;
     [SerializeField] float _objectGap = 10f;
     [SerializeField] float _densityVertical = 10f;
-    [SerializeField] MapDirection _mapDirection;
+    [SerializeField] MapDirectionID _mapDirection;
     [SerializeField] Color32 _color = UnityEngine.Color.white;
     [SerializeField][MinMaxRange(-10, 10)] RangedFloat _generatePositionX;
     [SerializeField][MinMaxRange(-10, 10)] RangedFloat _generatePositionY;
+    [SerializeField] SortingLayerID _sortingLayerID;
+    [SerializeField] int _sortingOrder;
     [Header("Shapes")]
     [SerializeField][MinMaxRange(0, 10)] RangedFloat _shapeDistance;
     [SerializeField][MinMaxRange(0.1f, 5)] RangedFloat _tangentHeight;
@@ -37,5 +39,7 @@ public class SOEnvObject : ScriptableObject
     public float ObjectGap { get => _objectGap; }
     public float DensityVertical { get => _densityVertical; }
     public Color32 Color { get => _color; }
-    internal MapDirection MapDirection { get => _mapDirection; }
+    internal MapDirectionID MapDirection { get => _mapDirection; }
+    public int SortingOrder { get => _sortingOrder;}
+    internal SortingLayerID SortingLayerID { get => _sortingLayerID;}
 }

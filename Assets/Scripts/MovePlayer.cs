@@ -29,5 +29,9 @@ public class MovePlayer : MonoBehaviour
         {
             speed = speed + 5;
         }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            speed = speed - 5;
+        }
     }
 }
