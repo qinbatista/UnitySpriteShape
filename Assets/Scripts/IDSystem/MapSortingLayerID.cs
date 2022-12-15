@@ -1,4 +1,4 @@
-enum SortingLayerID
+enum MapSortingLayerID
 {
     Sky,
     BackGround,

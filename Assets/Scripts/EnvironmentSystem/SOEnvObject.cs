@@ -15,7 +15,7 @@ public class SOEnvObject : ScriptableObject
     [SerializeField] Color32 _color = UnityEngine.Color.white;
     [SerializeField][MinMaxRange(-10, 10)] RangedFloat _generatePositionX;
     [SerializeField][MinMaxRange(-10, 10)] RangedFloat _generatePositionY;
-    [SerializeField] SortingLayerID _sortingLayerID;
+    [SerializeField] MapSortingLayerID _mapSortingLayerID;
     [SerializeField] int _sortingOrder;
     [Header("Shapes")]
     [SerializeField][MinMaxRange(0, 10)] RangedFloat _shapeDistance;
@@ -41,5 +41,5 @@ public class SOEnvObject : ScriptableObject
     public Color32 Color { get => _color; }
     internal MapDirectionID MapDirection { get => _mapDirection; }
     public int SortingOrder { get => _sortingOrder;}
-    internal SortingLayerID SortingLayerID { get => _sortingLayerID;}
+    internal MapSortingLayerID MapSortingLayerID { get => _mapSortingLayerID;}
 }

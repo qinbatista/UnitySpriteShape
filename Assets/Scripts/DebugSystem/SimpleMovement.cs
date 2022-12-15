@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePlayer : MonoBehaviour
+public class SimpleMovement : MonoBehaviour
 {
 
     int speed = 5;
