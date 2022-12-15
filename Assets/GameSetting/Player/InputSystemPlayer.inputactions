@@ -1,0 +1,484 @@
+{
+    "name": "InputSystemPlayer",
+    "maps": [
+        {
+            "name": "PlayerActions",
+            "id": "e7587bd2-6aa2-4bac-953d-9717da08282f",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "4f6212c9-dfcd-4beb-98bb-588859eba44f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "JumpTap",
+                    "type": "Button",
+                    "id": "9ab90d7a-2cdf-4d55-a260-38613c1544ee",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JumpHold",
+                    "type": "Button",
+                    "id": "e3ef3dde-da65-4c70-ab2d-c91d48fe34ab",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "JumpDoubleTap",
+                    "type": "Button",
+                    "id": "dd9b95fe-31f2-42fe-a9b9-b844a70cb447",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BasicSkillTap",
+                    "type": "Button",
+                    "id": "8c0d33ba-b803-4536-b7ad-6ecf13c4f362",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BasicSkillHold",
+                    "type": "Button",
+                    "id": "6ee2dede-0d56-485b-be0d-9a8370ca496a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "BasicSkillDoubleTap",
+                    "type": "Button",
+                    "id": "81888af6-f455-4cda-b98e-d4be863412c3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpecialSkillTap",
+                    "type": "Button",
+                    "id": "d8d9c0a8-74b8-493a-acec-688d6fd70bbd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpecialSkillHold",
+                    "type": "Button",
+                    "id": "b89bf0f5-6d7d-4534-9b05-5596eb4c7c5f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SpecialSkillDoubleTap",
+                    "type": "Button",
+                    "id": "af7bc012-cb87-41b6-8f23-e8a7c137c0e3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UltimateSkillTap",
+                    "type": "Button",
+                    "id": "ea031deb-2755-44ca-b9d8-d32c79ca3bc2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UltimateSkillHold",
+                    "type": "Button",
+                    "id": "203f3ca2-083c-455c-b65d-0d4ba1d671e5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "UltimateSkillDoubleTap",
+                    "type": "Button",
+                    "id": "04981ba5-26e2-4b44-883b-88e95e301e68",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "9d7f9fbf-e8a1-4484-b2e8-a8dfea7fa177",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "d97a3cbe-44b8-49e3-a245-31b866c455ae",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "8aadce08-b544-4691-ad6a-87d292afb3b1",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "9425afc3-9635-4f28-8c98-e99501f77659",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "9b91fae9-7f40-490a-a42d-299066546521",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "3952638e-916d-415a-abca-47f2e2e99065",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "598cb403-fe96-4f95-b9d4-d048107eea7f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "JumpTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8146b835-0118-409f-94cf-99a12b2f8151",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "JumpTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "40a5a7c8-70b2-46b5-b0da-2169b35b3a6d",
+                    "path": "<Keyboard>/space",
+                    "interactions": "MultiTap(tapTime=0.4,tapDelay=0.3)",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "JumpDoubleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2349a69d-e4a0-4a90-ad8d-332a0ba4c11e",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "JumpDoubleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "329de119-5c08-4683-84a8-b382780bcdcb",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Hold(duration=0.6,pressPoint=1)",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "JumpHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "117b407d-a376-4298-ab1b-697d791e2bdd",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "JumpHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0dab1052-8e66-41f9-9ba7-611f5b641327",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "BasicSkillTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "431f4656-2402-4bb6-93c7-874c3259f396",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "BasicSkillTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dca06483-bf78-45b6-95b0-6ea239cd9390",
+                    "path": "<Keyboard>/j",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "BasicSkillDoubleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aef63bed-957a-4410-acab-9ee96a77dc23",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "BasicSkillDoubleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba03ec3a-9da4-4cbe-a7e1-51aecee85ed1",
+                    "path": "<Keyboard>/j",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "BasicSkillHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cb19bcd3-ac95-4b38-a7be-8b1abd89c682",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "BasicSkillHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bad4bac4-b48c-49fe-98f4-eb1a70c9759d",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "SpecialSkillTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c9e4e1a4-897c-4223-ae94-6e8971202cc1",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "SpecialSkillTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aebc8da9-ca3d-4da5-a068-089f0b1a7131",
+                    "path": "<Keyboard>/k",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "SpecialSkillHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "29275f67-7f98-49e4-bef0-9a6cebd1bd28",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "SpecialSkillHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "326ef146-0760-4847-a4fd-2fc164075cd3",
+                    "path": "<Keyboard>/k",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "SpecialSkillDoubleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d7af01fd-4456-4684-8423-946bd130753e",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "SpecialSkillDoubleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "11888ff2-2b4a-41af-8215-6442c9b43407",
+                    "path": "<Keyboard>/l",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "UltimateSkillTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "87e85527-5757-42aa-9307-25e9c1547993",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "UltimateSkillTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6102cab9-8b23-4c00-92b3-55fd7c644923",
+                    "path": "<Keyboard>/l",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "UltimateSkillHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c5d29fd-6fb0-4420-a3f7-63613a47b8ca",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "UltimateSkillHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c427002-082f-4647-aaad-d703f892409a",
+                    "path": "<Keyboard>/l",
+                    "interactions": "MultiTap",
+                    "processors": "",
+                    "groups": "Keybord",
+                    "action": "UltimateSkillDoubleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f5536d1e-4aff-4805-98c4-fa8a10dfe2d9",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mobile",
+                    "action": "UltimateSkillDoubleTap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keybord",
+            "bindingGroup": "Keybord",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Mobile",
+            "bindingGroup": "Mobile",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
