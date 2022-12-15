@@ -10,25 +10,33 @@ public class SpriteShapeObject : MonoBehaviour
     Spline _spline;
     Vector3 _initialLeftSplinePosition;
     Vector3 _initialRightSplinePosition;
+    SpriteShapeRenderer _spriteRenderer;
     float _landDistance;
     const int _leftSplineNode = 0;
     const int _rightSplineNode = 1;
     [SerializeField] SOEnvObject _soEnvObject;
-
     public SOEnvObject SoEnvObject { get => _soEnvObject; }
 
     void Awake()
     {
+        _spriteRenderer = GetComponent<SpriteShapeRenderer>();
         _spriteShapeController = GetComponent<SpriteShapeController>();
         _spline = _spriteShapeController.spline;
         _spline.RemovePointAt(3);
         _spline.RemovePointAt(0);
         _initialLeftSplinePosition = _spline.GetPosition(_leftSplineNode);
         _initialRightSplinePosition = _spline.GetPosition(_rightSplineNode);
+        _spriteRenderer.color = SoEnvObject.Color;
 #if UNITY_EDITOR
         // InvokeRepeating("OnEnable", 0, 1);
 #endif
     }
+#if UNITY_EDITOR
+    void Update()
+    {
+        _spriteRenderer.color = SoEnvObject.Color;
+    }
+#endif
     void OnEnable()
     {
         _landDistance = Random.Range(SoEnvObject.ShapeDistance.minValue, SoEnvObject.ShapeDistance.maxValue);
